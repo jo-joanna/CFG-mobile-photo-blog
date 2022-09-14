@@ -11,7 +11,7 @@ export default function Contact() {
         <ScrollView>
             <StatusBar style="auto" />
             <SafeAreaView style={{flex: 1}}>          
-                <WebView source={{ uri: 'https://mobilecontact.netlify.app/' }} contentWidth={contentWidth}/>        
+                <WebView source={{ uri: 'https://contact-mobile-photo-blog.netlify.app/' }} contentWidth={contentWidth}/>        
             </SafeAreaView>
         </ScrollView>  
   );
