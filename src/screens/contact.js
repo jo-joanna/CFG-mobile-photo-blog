@@ -1,18 +1,23 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import {SafeAreaView, useWindowDimensions, ScrollView} from 'react-native';
-import { WebView} from 'react-native-webview';
+import { StyleSheet, View } from 'react-native';
+import Form from '../components/form';
 
 
-export default function Contact() {
-  const contentWidth = useWindowDimensions().width;
+const Contact = () => (
+  <View style={styles.container}>
+    <StatusBar style="auto" />
+   
+      <Form />
+  </View> 
+);
 
-  return (
-        <ScrollView>
-            <StatusBar style="auto" />
-            <SafeAreaView style={{flex: 1}}>          
-                <WebView source={{ uri: 'https://contact-mobile-photo-blog.netlify.app/' }} contentWidth={contentWidth}/>        
-            </SafeAreaView>
-        </ScrollView>  
-  );
-}
+
+const styles = StyleSheet.create({
+container: {
+  flex: 1,
+},
+
+});
+export default Contact;
+
