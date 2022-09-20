@@ -1,15 +1,20 @@
+import * as React from 'react';
 import { StyleSheet, Text, Pressable, Alert } from 'react-native';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 
-function write() {alert('Hello')}
+// function write() {alert('Hello')}
 
-const PressMe = () => {
+
+
+export default function PressMe(){
     console.log("This button was pressed!");
+    const navigation = useNavigation();
 
-return (
-  <Pressable style={style.buttonStyle} onPress={(write)}>
-    <Text> What does it do? </Text>
-  </Pressable>
-)
+    return (
+      <Pressable style={style.buttonStyle} onPress={()=>navigation.navigate('Sign In')}>
+        <Text style={{fontWeight: 'bold'}}> Sign Out </Text>
+      </Pressable>
+    )
 };
 
 
@@ -25,4 +30,3 @@ buttonStyle:{
   marginBottom: 10,
 },
 });
-export default PressMe;
